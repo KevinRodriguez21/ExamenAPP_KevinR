@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenAPP_KevinR.Views.PreguntaPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black"
+             BackgroundImageSource="apppreguntabg"
+             >
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Complete los detalles de la pregunta" 
+               FontSize="Medium" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center"
+               TextColor="White"
+               Margin="0,0,0,10"/>
+
+        <Entry x:Name="TxtDate" 
+               Placeholder="Fecha" 
+               Keyboard="Text" 
+               FontSize="Medium"
+               TextColor="White"
+               PlaceholderColor="Black"/>
+
+        <Entry x:Name="TxtAsk" 
+               Placeholder="Pregunta" 
+               Keyboard="Text" 
+               FontSize="Medium"
+               TextColor="White"
+               PlaceholderColor="Black"/>
+
+        <Entry x:Name="TxtStrike" 
+               Placeholder="Golpe" 
+               Keyboard="Text" 
+               FontSize="Medium"
+               TextColor="White"
+               PlaceholderColor="Black"/>
+
+        <Entry x:Name="TxtUrlImage" 
+               Placeholder="URL de la Imagen" 
+               Keyboard="Text" 
+               FontSize="Medium"
+               TextColor="White"
+               PlaceholderColor="Black"/>
+
+        <Entry x:Name="TxtAskDetail" 
+               Placeholder="Detalles de la Pregunta" 
+               Keyboard="Text" 
+               FontSize="Medium"
+               TextColor="White"
+               PlaceholderColor="Black"/>
+
+        <Picker x:Name="LstUser" 
+                Title="Seleccionar Usuario" 
+                TitleColor="Black"
+                ItemDisplayBinding="{Binding UserName}"
+                FontSize="Medium"
+                TextColor="White"/>
+
+        <Picker x:Name="LstStatus" 
+                Title="Seleccionar Estado"
+                TitleColor="Black"
+                ItemDisplayBinding="{Binding AskStatus1}"
+                FontSize="Medium"
+                TextColor="White"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <Button x:Name="BtnAdd" 
+                    Text="Agregar" 
+                    Clicked="BtnAdd_Clicked"  
+                    BackgroundColor="Green" 
+                    TextColor="White"
+                    FontAttributes="Bold" 
+                    CornerRadius="20" 
+                    WidthRequest="140" 
+                    HeightRequest="50"/>
+
+            <Button x:Name="BtnCancel" 
+                    Text="Cancelar" 
+                    Clicked="BtnCancel_Clicked" 
+                    BackgroundColor="Maroon" 
+                    TextColor="White" 
+                    CornerRadius="20" 
+                    WidthRequest="140" 
+                    HeightRequest="50"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

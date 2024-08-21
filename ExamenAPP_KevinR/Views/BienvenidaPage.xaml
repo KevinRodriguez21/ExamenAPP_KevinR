@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenAPP_KevinR.Views.BienvenidaPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black"
+             BackgroundImageSource="appbienvenidabg"
+             >
+    <VerticalStackLayout Padding="20,50,20,0" VerticalOptions="StartAndExpand">
+
+
+
+        <Entry x:Name="TxtUserName" Margin="0,30,0,10" Placeholder="Username" Keyboard="Email" FontSize="25" TextColor="White"/>
+
+        <Entry x:Name="TxtPassword" Placeholder="Password" Keyboard="Text" FontSize="25" IsPassword="True" TextColor="White"/>
+        <Switch x:Name="SwshowPassword" IsToggled="False" Toggled="SwshowPassword_Toggled" />
+
+        <Button x:Name="BtnLogin" Text="LOGIN" BackgroundColor="Green" Margin="0,30,0,0" Clicked="BtnLogin_Clicked"/>
+        
+        <Label x:Name="LblPasswordRecobery" Text="Password Recovery...."    HorizontalTextAlignment="End" TextColor="White"/>
+
+    </VerticalStackLayout>
+</ContentPage>
